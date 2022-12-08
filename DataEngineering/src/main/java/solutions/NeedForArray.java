@@ -1,10 +1,14 @@
-package array;
+package solutions;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class InefficientApproach {
+/*
+	줄의 수, 이벤트의 갯수, 최소, 최대 구하기
+*/
+
+public class NeedForArray {
 	
 	public static void linecount() throws IOException {
 		BufferedReader br = new BufferedReader(new FileReader("./dataset/email.txt"));

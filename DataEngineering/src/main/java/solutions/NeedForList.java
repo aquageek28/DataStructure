@@ -1,10 +1,16 @@
-package array;
+package solutions;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class EfficientApproach {
+import problems.Email;
+
+/*
+	줄의 수, 이벤트의 갯수, 최소, 최대 구하기
+*/
+
+public class NeedForList {
 	
 	public static void eventcount(Email[] data) throws IOException {
 		
