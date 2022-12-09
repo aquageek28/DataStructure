@@ -1,4 +1,4 @@
-package solutions;
+package examples;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -7,12 +7,10 @@ import java.io.IOException;
 import problems.Email;
 
 /*
-	100000 이전과 다음 ID 찾기 
-	= 100000 이상 수 중에서 최솟값을 찾는 문제 
-	= 100000 이하 수 중에서 최댓값을 찾는 문제
+	e-mail을 보낸 사람의 수를 구하기
 */
 
-public class NeedForTree {
+public class NeedForSet {
 	
 	public static Email[] getData() throws IOException {
 		Email[] data = new Email[420045];
@@ -47,25 +45,17 @@ public class NeedForTree {
 	public static void main(String[] args) throws IOException {
 		Email[] data = getData();
 		
-		int higher = Integer.MAX_VALUE;
-		int lower = 0;
-		for(Email email: data) {
-			int from = email.from;
-			int to = email.to;
-			
-			if(from > 100000 && from < higher) {
-				higher = from;
-			} else if (from < 100000 && from > lower) {
-				lower = from;
+		// 265213 이라는 ID가 있는지 확인하기
+		for(Email email : data) {
+			if(email.getFrom() == 265213) {
+				System.out.println("ID 발견 !");
+				System.exit(1);
 			}
-			
-			if(to > 100000 && to < higher) {
-				higher = to;
-			} else if(to < 100000 && to > lower) {
-				lower = to;
+			if(email.getTo() == 265213) {
+				System.out.println("ID 발견 !");
+				System.exit(1);
 			}
 		}
-		System.out.println("100000 다음의 수 : " + higher);
-		System.out.println("100000 이전의 수 : " + lower);
+		System.out.println("ID를 발견하지 못하였습니다 !");
 	}
 }

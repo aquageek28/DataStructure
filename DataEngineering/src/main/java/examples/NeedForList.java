@@ -1,4 +1,4 @@
-package solutions;
+package examples;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -25,11 +25,11 @@ public class NeedForList {
 
 		int min = Integer.MAX_VALUE;	 // 가장 최소의 사람 ID를 담는 min 변수 - 가장 큰 수로 초기화
 		for(Email email : data) {
-			if(email.from < min) {
-				min = email.from;
+			if(email.getFrom() < min) {
+				min = email.getFrom();
 			}
-			if(email.to < min) {
-				min = email.to;
+			if(email.getTo() < min) {
+				min = email.getTo();
 			}
 		}
 		System.out.println("최소 사람 ID : " + min);
@@ -39,11 +39,11 @@ public class NeedForList {
 		
 		int max = 0;	 // 가장 최대의 사람 ID를 담는 max 변수 - 가장 작은 수로 초기화
 		for(Email email : data) {
-			if(email.from > max) {
-				max = email.from;
+			if(email.getFrom() > max) {
+				max = email.getFrom();
 			}
-			if(email.to > max) {
-				max = email.to;
+			if(email.getTo() > max) {
+				max = email.getTo();
 			}
 		}
 		System.out.println("최대 사람 ID : " + max);

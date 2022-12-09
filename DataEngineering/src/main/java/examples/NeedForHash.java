@@ -1,4 +1,4 @@
-package solutions;
+package examples;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -49,7 +49,7 @@ public class NeedForHash {
 		Integer[] senders = new Integer[300000];
 		int count = 0;
 		for (Email email : data) {
-			int from = email.from;
+			int from = email.getFrom();
 			for (int i = 0; i < senders.length; i++) {
 				if (senders[i] == null) {
 					// from이 senders에 없으면, 추가 가능
